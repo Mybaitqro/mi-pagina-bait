@@ -66,7 +66,7 @@ const App: React.FC = () => {
 
       {/* Floating WhatsApp */}
       <a 
-        href="https://wa.me/524420000000" 
+        href="https://wa.me/524762851933" 
         target="_blank" 
         rel="noreferrer"
         className="fixed bottom-8 left-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition z-50 animate-bounce"

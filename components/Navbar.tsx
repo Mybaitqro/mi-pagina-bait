@@ -1,53 +1,41 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { LOGO_URL } from '../constants';
 
-interface NavbarProps {
-  cartCount: number;
-  onOpenCart: () => void;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+export const Footer: React.FC = () => {
   return (
-    <>
-      <div className="bg-black text-bait text-[10px] font-black uppercase tracking-[0.3em] py-2 text-center">
-        ⚡️ Portabilidad a Bait: Conserva tu número y recibe 20GB de regalo ⚡️
-      </div>
-      <nav className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md py-3 shadow-lg' : 'bg-white py-5 shadow-sm'
-      } px-6 flex justify-between items-center`}>
-        <div className="flex items-center gap-12">
-          <a href="#" className="hover:scale-105 transition-transform">
-            {/* Aumentamos h-9 a h-16 para que el logo sea más grande */}
-            <img src={LOGO_URL} alt="Bait" className="h-16 w-auto" />
-          </a>
-          <div className="hidden lg:flex gap-10 font-black text-[11px] uppercase tracking-[0.1em] text-gray-400">
-            <a href="#conectividad" className="hover:text-black hover:border-b-2 border-bait transition-all h-6">SIMs</a>
-            <a href="#planes" className="hover:text-black hover:border-b-2 border-bait transition-all h-6">Planes</a>
-            <a href="#tienda" className="hover:text-black hover:border-b-2 border-bait transition-all h-6">Equipos</a>
-            <a href="#distribuidores" className="hover:text-black hover:border-b-2 border-bait transition-all h-6">Ser Socio</a>
+    <footer className="bg-black text-white py-20 px-6 border-t border-zinc-900">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-16">
+        <div className="col-span-1 md:col-span-1">
+          {/* Logo aumentado a 108px en el footer */}
+          <img src={LOGO_URL} alt="Bait" className="h-[108px] mb-8 brightness-0 invert" />
+          <p className="text-zinc-500 font-bold text-sm italic">Distribuidor Autorizado Querétaro. Conectando a México con la red de Walmart.</p>
+        </div>
+        <div>
+          <h4 className="text-bait font-black uppercase tracking-widest text-xs mb-8">Navegación</h4>
+          <ul className="space-y-4 font-bold text-sm text-zinc-400 uppercase tracking-tighter">
+            <li><a href="#conectividad" className="hover:text-bait transition">SIMs & eSIMs</a></li>
+            <li><a href="#planes" className="hover:text-bait transition">Planes</a></li>
+            <li><a href="#tienda" className="hover:text-bait transition">Equipos</a></li>
+            <li><a href="#distribuidores" className="hover:text-bait transition">Distribuidores</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-bait font-black uppercase tracking-widest text-xs mb-8">Horario</h4>
+          <p className="text-zinc-400 font-bold text-sm uppercase">Lunes a Sábado <br/> 09:00 AM - 08:00 PM</p>
+        </div>
+        <div>
+          <h4 className="text-bait font-black uppercase tracking-widest text-xs mb-8">Redes Sociales</h4>
+          <div className="flex gap-6 text-2xl">
+            <a href="#" className="hover:text-bait transition"><i className="fab fa-facebook"></i></a>
+            <a href="#" className="hover:text-bait transition"><i className="fab fa-instagram"></i></a>
+            <a href="#" className="hover:text-bait transition"><i className="fab fa-tiktok"></i></a>
           </div>
         </div>
-        <div className="flex items-center gap-4">
-          <a href="https://mibait.com/recargas" target="_blank" className="hidden sm:block bg-bait text-black px-6 py-2.5 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-black hover:text-white transition shadow-sm">Recargas</a>
-          <button onClick={onOpenCart} className="relative p-2.5 bg-gray-50 rounded-full hover:bg-bait transition-all group">
-            <i className="fas fa-shopping-bag text-xl text-black"></i>
-            {cartCount > 0 && (
-              <span className="absolute -top-1 -right-1 bg-black text-bait text-[9px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-white animate-in zoom-in duration-300">
-                {cartCount}
-              </span>
-            )}
-          </button>
-        </div>
-      </nav>
-    </>
+      </div>
+      <div className="max-w-7xl mx-auto border-t border-zinc-900 mt-20 pt-10 text-center text-[10px] font-black text-zinc-600 uppercase tracking-[0.3em]">
+        &copy; 2024 Bait Querétaro - Todos los derechos reservados
+      </div>
+    </footer>
   );
 };
