@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { LOGO_URL } from '../constants';
 
@@ -7,8 +6,8 @@ export const Footer: React.FC = () => {
     <footer className="bg-black text-white py-20 px-6 border-t border-zinc-900">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-16">
         <div className="col-span-1 md:col-span-1">
-          {/* Logo aumentado a 108px en el footer */}
-          <img src={LOGO_URL} alt="Bait" className="h-[108px] mb-8 brightness-0 invert" />
+          {/* Logo aumentado a 146px en el footer */}
+          <img src={LOGO_URL} alt="Bait" className="h-[146px] mb-8 brightness-0 invert object-contain" />
           <p className="text-zinc-500 font-bold text-sm italic">Distribuidor Autorizado Querétaro. Conectando a México con la red de Walmart.</p>
         </div>
         <div>
