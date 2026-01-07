@@ -1,28 +1,39 @@
 import { Product, Plan, Phone, Location } from './types';
 
-export const LOGO_URL = "https://mibait.com/wp-content/uploads/2023/05/Logo-BAIT-1.png";
+/**
+ * 🎨 GUÍA PARA ARTURO: EL LOGO PERFECTO
+ * ✅ LOGO ACTUALIZADO: Ya usamos tu link de Postimages.
+ * Si alguna vez quieres cambiarlo por otro, repite el proceso y cambia el link de abajo.
+ */
+export const LOGO_URL = "https://i.postimg.cc/bwRc9nMp/logo-bait.png";
 
-// CONFIGURACIÓN DE CONTACTO PRINCIPAL
+// 📞 CONFIGURACIÓN DE CONTACTO (Tu WhatsApp y Correo)
 export const CONTACT_CONFIG = {
-  whatsapp: "524762851933", // Número oficial actualizado
+  whatsapp: "524762851933", 
   defaultMessage: "¡Hola Bait Querétaro! Vi la página y me interesa una SIM/eSIM o información de un equipo.",
   email: "ventas@baitqueretaro.com"
 };
 
+/**
+ * 📱 PRODUCTOS DE CONECTIVIDAD (SIM y eSIM)
+ * Tip: Usa fotos en formato .PNG para que se vean flotando sin fondo blanco.
+ */
 export const CONNECTIVITY_PRODUCTS: Product[] = [
   {
     id: 'sim-fisica',
     name: 'SIM Física Bait',
     description: 'Chip con cobertura nacional 4.5G y redes sociales incluidas.',
     price: 100,
-    type: 'SIM'
+    type: 'SIM',
+    image: 'https://i.postimg.cc/85M8yvV7/bait-sim-card.png' 
   },
   {
     id: 'esim-virtual',
     name: 'eSIM Bait',
-    description: 'Activación digital inmediata. Sin necesidad de chip físico.',
+    description: 'Activación digital inmediata vía QR. Sin esperar envíos.',
     price: 100,
-    type: 'ESIM'
+    type: 'ESIM',
+    image: 'https://i.postimg.cc/mD8P4r7L/esim-icon.png'
   }
 ];
 
@@ -60,6 +71,10 @@ export const PLANS: Plan[] = [
   }
 ];
 
+/**
+ * 🛒 TIENDA DE CELULARES
+ * Cuando subas fotos de celulares, intenta que todas tengan el mismo tamaño.
+ */
 export const PHONES: Phone[] = [
   {
     id: 'iphone-15',
@@ -69,7 +84,7 @@ export const PHONES: Phone[] = [
     description: 'Cámara Pro y el mejor rendimiento con red Bait.',
     price: 18499,
     type: 'PHONE',
-    image: 'https://cdn.shopify.com/s/files/1/0616/4384/9963/files/iphone-15-black.png?v=1701358364',
+    image: 'https://m.media-amazon.com/images/I/71d7rfSl0wL._AC_SL1500_.jpg',
     specs: ['Pantalla 6.1"', 'Cámara 48MP', 'A16 Bionic']
   },
   {
@@ -80,7 +95,7 @@ export const PHONES: Phone[] = [
     description: 'El poder de la IA en tus manos con Galaxy AI.',
     price: 15999,
     type: 'PHONE',
-    image: 'https://images.samsung.com/is/image/samsung/p6pim/mx/2401/gallery/mx-galaxy-s24-s921-sm-s921bzbaltm-539324637?$650_519_PNG$',
+    image: 'https://m.media-amazon.com/images/I/71WkS9YmS4L._AC_SL1500_.jpg',
     specs: ['Pantalla 6.2"', 'Cámara 50MP', 'Exynos 2400']
   },
   {
@@ -90,7 +105,7 @@ export const PHONES: Phone[] = [
     brand: 'Motorola',
     description: 'Excelente balance entre precio y calidad.',
     price: 4999,
-    image: 'https://armatupaquete.com/wp-content/uploads/2023/11/moto-g84-magenta.png',
+    image: 'https://m.media-amazon.com/images/I/61N9p7XU8KL._AC_SL1200_.jpg',
     type: 'PHONE',
     specs: ['256GB Almacenamiento', '12GB RAM', 'Cámara 50MP']
   }
