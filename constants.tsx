@@ -3,6 +3,9 @@ import { Product, Plan, Phone, Location } from './types';
 
 export const LOGO_URL = "https://i.postimg.cc/bwRc9nMp/logo-bait.png";
 
+// Se actualizó con tu link directo de PostImages:
+export const PAYJOY_LOGO_URL = "https://i.postimg.cc/mDjTXb4W/payjoy-logo.png";
+
 export const CONTACT_CONFIG = {
   whatsapp: "524762851933", 
   defaultMessage: "¡Hola Bait Querétaro! Vi su publicidad y me interesa una SIM con la promo de apertura.",
