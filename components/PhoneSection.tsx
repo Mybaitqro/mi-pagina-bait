@@ -14,39 +14,39 @@ export const PhoneSection: React.FC<Props> = ({ onAdd }) => {
         
         {/* CABECERA ESTILO IMAGEN DE REFERENCIA */}
         <div className="flex flex-col items-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-12 italic text-zinc-900">
+          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16 italic text-zinc-900">
             Smartphone Store
           </h2>
           
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-5xl">
-            {/* Lado Izquierdo: El Badge de Crédito */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 w-full max-w-6xl">
+            {/* Lado Izquierdo: El Badge de Crédito (Escalado para balancear) */}
             <div className="flex-1 flex justify-center md:justify-end">
-              <div className="bg-white border-2 border-bait rounded-full px-8 py-5 flex items-center gap-4 shadow-sm">
-                <i className="fas fa-id-card text-black text-2xl"></i>
-                <span className="font-black text-lg uppercase tracking-widest text-black">
+              <div className="bg-white border-2 border-bait rounded-full px-10 py-6 flex items-center gap-6 shadow-md">
+                <i className="fas fa-id-card text-black text-3xl"></i>
+                <span className="font-black text-xl md:text-2xl uppercase tracking-widest text-black">
                   Crédito PayJoy solo con tu INE
                 </span>
               </div>
             </div>
             
-            {/* Lado Derecho: El Logo de PayJoy (Tamaño 116px igual que Bait) */}
+            {/* Lado Derecho: El Logo de PayJoy (TAMAÑO DUPLICADO) */}
             <div className="flex-1 flex justify-center md:justify-start">
               <img 
                 src={PAYJOY_LOGO_URL} 
                 alt="PayJoy Logo" 
-                className="h-[90px] md:h-[116px] w-auto object-contain" 
+                className="h-[150px] md:h-[232px] w-auto object-contain transform hover:scale-105 transition-transform duration-500" 
               />
             </div>
           </div>
           
           {/* Texto pequeño inferior */}
-          <div className="mt-8">
-            <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.5em]">
+          <div className="mt-12">
+            <span className="text-[12px] font-black text-gray-400 uppercase tracking-[0.6em]">
               Aliado oficial de financiamiento:
             </span>
           </div>
           
-          <p className="mt-12 text-gray-500 font-bold italic underline decoration-bait decoration-4 text-xl text-center">
+          <p className="mt-16 text-gray-500 font-bold italic underline decoration-bait decoration-4 text-2xl text-center">
             ¡Estrena hoy y paga poco a poco en tu sucursal más cercana!
           </p>
         </div>
