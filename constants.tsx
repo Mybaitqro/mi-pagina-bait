@@ -2,6 +2,13 @@ import { Product, Plan, Phone, Location } from './types';
 
 export const LOGO_URL = "https://mibait.com/wp-content/uploads/2023/05/Logo-BAIT-1.png";
 
+// CONFIGURACIÓN DE CONTACTO PRINCIPAL
+export const CONTACT_CONFIG = {
+  whatsapp: "524762851933", // Número oficial actualizado
+  defaultMessage: "¡Hola Bait Querétaro! Vi la página y me interesa una SIM/eSIM o información de un equipo.",
+  email: "ventas@baitqueretaro.com"
+};
+
 export const CONNECTIVITY_PRODUCTS: Product[] = [
   {
     id: 'sim-fisica',
@@ -83,8 +90,8 @@ export const PHONES: Phone[] = [
     brand: 'Motorola',
     description: 'Excelente balance entre precio y calidad.',
     price: 4999,
-    type: 'PHONE',
     image: 'https://armatupaquete.com/wp-content/uploads/2023/11/moto-g84-magenta.png',
+    type: 'PHONE',
     specs: ['256GB Almacenamiento', '12GB RAM', 'Cámara 50MP']
   }
 ];
