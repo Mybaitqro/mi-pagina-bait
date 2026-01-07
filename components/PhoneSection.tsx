@@ -14,25 +14,25 @@ export const PhoneSection: React.FC<Props> = ({ onAdd }) => {
         <div className="text-center mb-16 flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 italic">Smartphone Store</h2>
           
-          <div className="flex flex-col md:flex-row items-center gap-6 mt-4">
+          <div className="flex flex-col items-center gap-8 mt-6">
             {/* Badge de PayJoy */}
-            <div className="bg-bait/10 inline-flex items-center gap-4 px-6 py-3 rounded-full border-2 border-bait shadow-sm">
-              <i className="fas fa-id-card text-black text-xl"></i>
-              <span className="font-black text-sm uppercase tracking-widest">Crédito PayJoy solo con tu INE</span>
+            <div className="bg-bait/10 inline-flex items-center gap-4 px-8 py-4 rounded-full border-2 border-bait shadow-sm">
+              <i className="fas fa-id-card text-black text-2xl"></i>
+              <span className="font-black text-lg uppercase tracking-widest">Crédito PayJoy solo con tu INE</span>
             </div>
             
-            {/* Logo de PayJoy para confianza */}
-            <div className="flex items-center gap-3">
-              <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Aliado oficial:</span>
+            {/* Logo de PayJoy para confianza - TAMAÑO IGUALADO AL HEADER */}
+            <div className="flex flex-col items-center gap-4">
+              <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em] mb-2">Aliado oficial de financiamiento:</span>
               <img 
                 src={PAYJOY_LOGO_URL} 
                 alt="PayJoy Logo" 
-                className="h-10 md:h-12 w-auto object-contain" 
+                className="h-[80px] md:h-[116px] w-auto object-contain transform hover:scale-105 transition-transform duration-300" 
               />
             </div>
           </div>
           
-          <p className="mt-8 text-gray-500 font-bold italic underline decoration-bait decoration-4">
+          <p className="mt-10 text-gray-500 font-bold italic underline decoration-bait decoration-4 text-xl">
             ¡Estrena hoy y paga poco a poco en tu sucursal más cercana!
           </p>
         </div>
