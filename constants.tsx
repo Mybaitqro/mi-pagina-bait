@@ -94,14 +94,14 @@ export const LOCATIONS: Location[] = [
     id: 'qro-1',
     name: 'Sucursal Diamante',
     address: 'Calle Diamante 909, Lomas de San Pedrito, Querétaro.',
-    phone: '442 234 5678',
+    phone: '476 285 1933',
     hours: 'Lun-Vie 9:00 - 19:00, Sáb 10:00 - 14:00'
   },
   {
     id: 'qro-2',
     name: 'Sucursal Pie de la Cuesta',
     address: 'Av. Pie de la Cuesta 115, San Pablo, Querétaro.',
-    phone: '442 345 6789',
+    phone: '476 285 1933',
     hours: 'Lun-Sáb 10:00 - 20:00'
   }
 ];
