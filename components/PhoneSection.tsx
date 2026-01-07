@@ -9,34 +9,49 @@ interface Props {
 
 export const PhoneSection: React.FC<Props> = ({ onAdd }) => {
   return (
-    <section id="tienda" className="py-24 px-4 bg-white">
+    <section id="tienda" className="py-24 px-4 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 italic">Smartphone Store</h2>
+        
+        {/* CABECERA ESTILO IMAGEN DE REFERENCIA */}
+        <div className="flex flex-col items-center mb-20">
+          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-12 italic text-zinc-900">
+            Smartphone Store
+          </h2>
           
-          <div className="flex flex-col items-center gap-8 mt-6">
-            {/* Badge de PayJoy */}
-            <div className="bg-bait/10 inline-flex items-center gap-4 px-8 py-4 rounded-full border-2 border-bait shadow-sm">
-              <i className="fas fa-id-card text-black text-2xl"></i>
-              <span className="font-black text-lg uppercase tracking-widest">Crédito PayJoy solo con tu INE</span>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-5xl">
+            {/* Lado Izquierdo: El Badge de Crédito */}
+            <div className="flex-1 flex justify-center md:justify-end">
+              <div className="bg-white border-2 border-bait rounded-full px-8 py-5 flex items-center gap-4 shadow-sm">
+                <i className="fas fa-id-card text-black text-2xl"></i>
+                <span className="font-black text-lg uppercase tracking-widest text-black">
+                  Crédito PayJoy solo con tu INE
+                </span>
+              </div>
             </div>
             
-            {/* Logo de PayJoy para confianza - TAMAÑO IGUALADO AL HEADER */}
-            <div className="flex flex-col items-center gap-4">
-              <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.4em] mb-2">Aliado oficial de financiamiento:</span>
+            {/* Lado Derecho: El Logo de PayJoy (Tamaño 116px igual que Bait) */}
+            <div className="flex-1 flex justify-center md:justify-start">
               <img 
                 src={PAYJOY_LOGO_URL} 
                 alt="PayJoy Logo" 
-                className="h-[80px] md:h-[116px] w-auto object-contain transform hover:scale-105 transition-transform duration-300" 
+                className="h-[90px] md:h-[116px] w-auto object-contain" 
               />
             </div>
           </div>
           
-          <p className="mt-10 text-gray-500 font-bold italic underline decoration-bait decoration-4 text-xl">
+          {/* Texto pequeño inferior */}
+          <div className="mt-8">
+            <span className="text-[10px] font-black text-gray-400 uppercase tracking-[0.5em]">
+              Aliado oficial de financiamiento:
+            </span>
+          </div>
+          
+          <p className="mt-12 text-gray-500 font-bold italic underline decoration-bait decoration-4 text-xl text-center">
             ¡Estrena hoy y paga poco a poco en tu sucursal más cercana!
           </p>
         </div>
 
+        {/* CUADRÍCULA DE TELÉFONOS */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {PHONES.map(phone => (
             <div key={phone.id} className="group flex flex-col bg-gray-50 rounded-[3rem] p-8 border-2 border-transparent hover:border-bait transition-all duration-500 shadow-sm hover:shadow-2xl">
