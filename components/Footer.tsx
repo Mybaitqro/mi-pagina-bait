@@ -1,12 +1,12 @@
+
 import React from 'react';
-import { LOGO_URL } from '../constants';
+import { LOGO_URL, SOCIAL_LINKS } from '../constants';
 
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-black text-white py-20 px-6 border-t border-zinc-900">
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-16">
         <div className="col-span-1 md:col-span-1">
-          {/* Logo aumentado a 146px en el footer */}
           <img src={LOGO_URL} alt="Bait" className="h-[146px] mb-8 brightness-0 invert object-contain" />
           <p className="text-zinc-500 font-bold text-sm italic">Distribuidor Autorizado Querétaro. Conectando a México con la red de Walmart.</p>
         </div>
@@ -26,9 +26,9 @@ export const Footer: React.FC = () => {
         <div>
           <h4 className="text-bait font-black uppercase tracking-widest text-xs mb-8">Redes Sociales</h4>
           <div className="flex gap-6 text-2xl">
-            <a href="#" className="hover:text-bait transition"><i className="fab fa-facebook"></i></a>
-            <a href="#" className="hover:text-bait transition"><i className="fab fa-instagram"></i></a>
-            <a href="#" className="hover:text-bait transition"><i className="fab fa-tiktok"></i></a>
+            <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noreferrer" className="hover:text-bait transition"><i className="fab fa-facebook"></i></a>
+            <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noreferrer" className="hover:text-bait transition"><i className="fab fa-instagram"></i></a>
+            <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noreferrer" className="hover:text-bait transition"><i className="fab fa-tiktok"></i></a>
           </div>
         </div>
       </div>

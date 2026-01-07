@@ -1,5 +1,6 @@
+
 import React, { useEffect, useState } from 'react';
-import { LOGO_URL } from '../constants';
+import { LOGO_URL, SOCIAL_LINKS } from '../constants';
 
 interface NavbarProps {
   cartCount: number;
@@ -17,19 +18,23 @@ export const Navbar: React.FC<NavbarProps> = ({ cartCount, onOpenCart }) => {
 
   return (
     <>
-      <div className="bg-black text-bait text-[10px] font-black uppercase tracking-[0.3em] py-2 text-center">
-        ⚡️ Portabilidad a Bait: Conserva tu número y recibe 20GB de regalo ⚡️
+      <div className="bg-black text-bait text-[10px] font-black uppercase tracking-[0.3em] py-2 px-10 flex justify-between items-center">
+        <div className="hidden sm:block">⚡️ Portabilidad: 20GB de regalo ⚡️</div>
+        <div className="mx-auto sm:mx-0">¡Síguenos!</div>
+        <div className="flex gap-4 items-center">
+          <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noreferrer" className="hover:text-white transition"><i className="fab fa-facebook-f"></i></a>
+          <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noreferrer" className="hover:text-white transition"><i className="fab fa-instagram"></i></a>
+          <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noreferrer" className="hover:text-white transition"><i className="fab fa-tiktok"></i></a>
+        </div>
       </div>
       <nav className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-white/95 backdrop-blur-md py-4 shadow-xl' : 'bg-white py-8 shadow-sm'
       } px-10 flex justify-between items-center`}>
         <div className="flex items-center gap-24">
           <a href="#" className="hover:scale-105 transition-transform flex-shrink-0">
-            {/* Logo en 116px de altura */}
             <img src={LOGO_URL} alt="Bait" className="h-[116px] w-auto object-contain" />
           </a>
           
-          {/* Tamaño de fuente aumentado a 2xl (24px) y espacio entre ellos a gap-16 */}
           <div className="hidden lg:flex gap-16 font-black text-2xl uppercase tracking-[0.15em] text-gray-400">
             <a href="#conectividad" className="hover:text-black hover:border-b-[6px] border-bait transition-all pb-2">SIMs</a>
             <a href="#planes" className="hover:text-black hover:border-b-[6px] border-bait transition-all pb-2">Planes</a>

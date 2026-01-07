@@ -1,28 +1,47 @@
+
 import { Product, Plan, Phone, Location } from './types';
 
-/**
- * 🎨 GUÍA PARA ARTURO: EL LOGO PERFECTO
- * ✅ LOGO ACTUALIZADO: Ya usamos tu link de Postimages.
- * Si alguna vez quieres cambiarlo por otro, repite el proceso y cambia el link de abajo.
- */
 export const LOGO_URL = "https://i.postimg.cc/bwRc9nMp/logo-bait.png";
 
-// 📞 CONFIGURACIÓN DE CONTACTO (Tu WhatsApp y Correo)
 export const CONTACT_CONFIG = {
   whatsapp: "524762851933", 
-  defaultMessage: "¡Hola Bait Querétaro! Vi la página y me interesa una SIM/eSIM o información de un equipo.",
+  defaultMessage: "¡Hola Bait Querétaro! Vi su publicidad y me interesa una SIM con la promo de apertura.",
   email: "ventas@baitqueretaro.com"
 };
 
-/**
- * 📱 PRODUCTOS DE CONECTIVIDAD (SIM y eSIM)
- * Tip: Usa fotos en formato .PNG para que se vean flotando sin fondo blanco.
- */
+// CAMBIA ESTOS LINKS POR TUS PERFILES REALES
+export const SOCIAL_LINKS = {
+  facebook: "https://www.facebook.com/baitqueretaro",
+  instagram: "https://www.instagram.com/baitqueretaro",
+  tiktok: "https://www.tiktok.com/@baitqueretaro"
+};
+
+export const TESTIMONIALS = [
+  {
+    name: "Ricardo M.",
+    zone: "Juriquilla",
+    text: "La eSIM me llegó al correo en 5 minutos. Excelente señal en toda la ciudad.",
+    stars: 5
+  },
+  {
+    name: "Sofía G.",
+    zone: "Centro",
+    text: "Cambié mi número de siempre a Bait y me regalaron los 20GB. ¡Súper recomendado!",
+    stars: 5
+  },
+  {
+    name: "Juan P.",
+    zone: "Corregidora",
+    text: "Compré un iPhone con PayJoy y solo me pidieron mi INE. Trámite muy rápido.",
+    stars: 5
+  }
+];
+
 export const CONNECTIVITY_PRODUCTS: Product[] = [
   {
     id: 'sim-fisica',
     name: 'SIM Física Bait',
-    description: 'Chip con cobertura nacional 4.5G y redes sociales incluidas.',
+    description: 'Envío gratis en Querétaro. Incluye 20GB de regalo por portabilidad.',
     price: 100,
     type: 'SIM',
     image: 'https://i.postimg.cc/85M8yvV7/bait-sim-card.png' 
@@ -30,7 +49,7 @@ export const CONNECTIVITY_PRODUCTS: Product[] = [
   {
     id: 'esim-virtual',
     name: 'eSIM Bait',
-    description: 'Activación digital inmediata vía QR. Sin esperar envíos.',
+    description: 'Activación digital instantánea. Sin cables, sin esperas.',
     price: 100,
     type: 'ESIM',
     image: 'https://i.postimg.cc/mD8P4r7L/esim-icon.png'
@@ -71,10 +90,6 @@ export const PLANS: Plan[] = [
   }
 ];
 
-/**
- * 🛒 TIENDA DE CELULARES
- * Cuando subas fotos de celulares, intenta que todas tengan el mismo tamaño.
- */
 export const PHONES: Phone[] = [
   {
     id: 'iphone-15',
